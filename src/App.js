@@ -18,19 +18,6 @@ function App() {
         onChange={( e=>setKeyword(e.target.value))} />
       <button onClick={fetchData}>Fetch</button>
 
-      <table>
-        <tbody>
-          {
-            data.map(repo=>
-              <tr>
-                <td>{repo.full_name}</td>
-                <td>
-                  <a href={repo.html_url}>{repo.html_url}</a>
-                </td>
-              </tr>)
-          }
-        </tbody>
-      </table>
     </div>
   );
 }
